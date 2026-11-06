@@ -2,6 +2,8 @@
 
 [English](README.en.md) | 简体中文
 
+> 包名：`@skyrocks/dsh-go-quota`（GitHub 仓库名：`dsh-go-quota`）
+
 在 **DeepSeek Harness** 的对话输入框下方，常驻显示 **OpenCode GO 套餐**的
 **5 小时 / 本周 / 本月**三个额度窗口：标签 + 迷你进度条 + 百分比，悬浮看重置倒计时，点击立即刷新。
 
@@ -59,7 +61,10 @@
 5. 在对话里选择一个 `opencode-go` 的模型，输入框下方会出现
    `GO 5h … · 周 … · 月 …`。如果没出现，见[常见问题](#常见问题)。
 
-安装完成后，插件列表里会显示 `dsh-go-quota`（插件行 id 为 `go-quota`）。
+安装完成后，插件列表里会显示 `@skyrocks/dsh-go-quota`（插件行 id 为 `go-quota`）。
+
+> **从 0.1.8 及更早版本升级**：先移除旧包 `dsh-go-quota`，再安装新的 `@skyrocks/dsh-go-quota`。
+> 两个版本的插件行 id 都是 `go-quota`，同时存在会冲突。
 
 ### 其他安装来源
 
@@ -68,8 +73,7 @@
 | 来源 | 粘贴内容 | 适用场景 |
 | --- | --- | --- |
 | GitHub | `github:skyrocks/dsh-go-quota` | 日常安装，跟随默认分支 |
-| tarball | Release 里的 `.tgz` 绝对路径 | 固定版本、分发给别人 |
-| tarball | tarball 的**绝对路径**，如 `/Users/you/Downloads/dsh-go-quota-0.1.8.tgz` | 固定版本、分发给别人 |
+| tarball | `/Users/you/Downloads/skyrocks-dsh-go-quota-0.1.9.tgz`（绝对路径） | 固定版本、分发给别人 |
 | 本地目录 | 目录的**绝对路径**，如 `/Users/you/dsh-go-quota` | 开发调试（`link:` 符号链接） |
 
 Windows 的目录安装请写成 `file:C:\Users\you\dsh-go-quota`，避免 pnpm `link:` 的盘符问题。
@@ -84,7 +88,7 @@ Windows 的目录安装请写成 `file:C:\Users\you\dsh-go-quota`，避免 pnpm 
 dsh plugin --profile desktop add github:skyrocks/dsh-go-quota
 
 # tarball
-dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota-0.1.8.tgz
+dsh plugin --profile desktop add /absolute/path/to/skyrocks-dsh-go-quota-0.1.9.tgz
 
 # 本地目录（开发）
 dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota
@@ -98,7 +102,7 @@ dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota
 插件本身跨平台：纯 ESM + 浏览器 bundle，没有 `process.platform` 分支、没有原生模块，
 `fetch` / `AbortSignal.timeout` 由 Node 自带。
 
-- 推荐用 **tarball**，弹窗粘贴 `C:\Users\you\Downloads\dsh-go-quota-0.1.8.tgz`。
+- 推荐用 **tarball**，弹窗粘贴 `C:\Users\you\Downloads\skyrocks-dsh-go-quota-0.1.9.tgz`。
 - 目录安装请用 `file:C:\...`；pnpm 的 `link:` 目录依赖在 Windows 上有盘符问题。
 - 路径必须是绝对路径。
 - 装完同样要完全退出并重启 DSH。

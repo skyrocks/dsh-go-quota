@@ -1,7 +1,7 @@
 // Client 半：在输入框下方常驻显示 OpenCode GO 三窗口用量。
 // 手写 lazy-CJS bundle：脚本执行时只注册 factory，模块体在 materialize 时才运行。
 window.__ModuleLoader__.load({
-  id: "dsh-go-quota",
+  id: "@skyrocks/dsh-go-quota",
   factory: (require) => {
     var module = { exports: {} };
     var exports = module.exports;
@@ -20,10 +20,10 @@ window.__ModuleLoader__.load({
     // 0.2.1 要求 strict codec 带 create() 工厂。
     const passThrough = () => ({ parse: (value) => value });
     const REMOTE = {
-      package: "dsh-go-quota",
+      package: "@skyrocks/dsh-go-quota",
       descriptors: [
         {
-          id: "dsh-go-quota#goQuota/read",
+          id: "@skyrocks/dsh-go-quota#goQuota/read",
           service: "goQuota",
           namespace: "goQuota",
           method: "read",
@@ -31,12 +31,12 @@ window.__ModuleLoader__.load({
           parameters: [],
           result: {
             mode: "strict",
-            typeSymbol: "dsh-go-quota#GoQuotaResult",
+            typeSymbol: "@skyrocks/dsh-go-quota#GoQuotaResult",
             create: passThrough,
           },
         },
         {
-          id: "dsh-go-quota#goQuota/refresh",
+          id: "@skyrocks/dsh-go-quota#goQuota/refresh",
           service: "goQuota",
           namespace: "goQuota",
           method: "refresh",
@@ -44,7 +44,7 @@ window.__ModuleLoader__.load({
           parameters: [],
           result: {
             mode: "strict",
-            typeSymbol: "dsh-go-quota#GoQuotaResult",
+            typeSymbol: "@skyrocks/dsh-go-quota#GoQuotaResult",
             create: passThrough,
           },
         },

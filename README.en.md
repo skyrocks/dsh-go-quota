@@ -2,6 +2,8 @@
 
 English | [简体中文](README.md)
 
+> Package: `@skyrocks/dsh-go-quota` (GitHub repository: `dsh-go-quota`)
+
 A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin that keeps the
 **OpenCode GO** quota for the **5-hour / weekly / monthly** windows visible right below the
 chat composer: label + mini progress bar + percentage, with reset countdowns on hover and
@@ -48,6 +50,9 @@ click-to-refresh.
 5. Pick a model that uses the `opencode-go` provider. The dock should appear below
    the composer: `GO 5h … · week … · month …`.
 
+> **Upgrading from 0.1.8 or earlier**: remove the old unscoped `dsh-go-quota` before
+> installing `@skyrocks/dsh-go-quota`; both bundle patches use the same row id (`go-quota`).
+
 ### Other sources
 
 Use the same “Add plugin” dialog with a different value:
@@ -55,8 +60,7 @@ Use the same “Add plugin” dialog with a different value:
 | Source | Paste | When |
 | --- | --- | --- |
 | GitHub | `github:skyrocks/dsh-go-quota` | Normal installs, tracks the default branch |
-| tarball | absolute path to a release `.tgz` | Pinned versions, sharing |
-| tarball | absolute path to `dsh-go-quota-0.1.8.tgz` | Pinned versions, sharing |
+| tarball | absolute path to `skyrocks-dsh-go-quota-0.1.9.tgz` | Pinned versions, sharing |
 | local directory | absolute path to the checkout | Development (`link:` symlink) |
 
 On Windows, use `file:C:\path\to\dsh-go-quota` for directory installs to avoid
@@ -66,7 +70,7 @@ pnpm's `link:` drive-letter issue. Relative paths and `~` are rejected.
 
 ```sh
 dsh plugin --profile desktop add github:skyrocks/dsh-go-quota
-dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota-0.1.8.tgz
+dsh plugin --profile desktop add /absolute/path/to/skyrocks-dsh-go-quota-0.1.9.tgz
 dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota
 ```
 

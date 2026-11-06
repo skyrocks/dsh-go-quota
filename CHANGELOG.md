@@ -4,6 +4,22 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.1.9] - 2026-11-06
+
+### Changed
+
+- Renamed the package from `dsh-go-quota` to `@skyrocks/dsh-go-quota`, matching the
+  other `@skyrocks/*` DSH plugins. The repository name stays `dsh-go-quota`.
+- Updated the Typert manifest, client bundle id, Remote descriptors and bundle patch
+  row to the scoped name; added a consistency test so they cannot drift again.
+- README: tarball names now use `skyrocks-dsh-go-quota-0.1.9.tgz`; removed a duplicated
+  install-source row left from the 0.1.8 docs update.
+
+### Upgrade note
+
+- Remove the old unscoped `dsh-go-quota` (0.1.7 / 0.1.8) first. Both versions insert
+  the same plugin row id (`go-quota`), so keeping both installed will conflict.
+
 ## [0.1.8] - 2026-11-06
 
 ### Changed

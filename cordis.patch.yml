@@ -1,8 +1,8 @@
-# dsh-go-quota 插件行：作为 bundle patch 自动注入 profile 组合。
+# @skyrocks/dsh-go-quota 插件行：作为 bundle patch 自动注入 profile 组合。
 # 安装后由 `dsh plugin add` 的 reconcile 步骤登记为 profile layer，无需手改用户层。
 - insert:
     - id: go-quota
-      name: dsh-go-quota
+      name: "@skyrocks/dsh-go-quota"
       config:
         baseUrl: https://opencode.ai/zen/go/v1/usage
         timeoutMs: 15000

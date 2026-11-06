@@ -117,4 +117,15 @@ test("悬浮弹层进度填充是块级元素（宽度百分比才生效）", ()
   assert.match(client, /\.dsh-gq-fill\{display:block/);
 });
 
+test("包名在 package.json / Typert / client / cordis.patch.yml 中一致", () => {
+  const pkg = JSON.parse(readFileSync(new URL("../package.json", import.meta.url), "utf8"));
+  assert.equal(pkg.name, "@skyrocks/dsh-go-quota");
+  assert.equal(TYPERT.package, pkg.name);
+  const client = readFileSync(new URL("../client.js", import.meta.url), "utf8");
+  assert.ok(client.includes(`id: "${pkg.name}"`), "client bundle id must equal package name");
+  assert.ok(client.includes(`package: "${pkg.name}"`), "Remote package must equal package name");
+  const patch = readFileSync(new URL("../cordis.patch.yml", import.meta.url), "utf8");
+  assert.ok(patch.includes(`name: "${pkg.name}"`), "bundle patch row must name the package");
+});
+
 console.log(`\n${passed} passed`);

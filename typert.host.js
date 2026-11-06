@@ -40,12 +40,12 @@ function parseResult(value) {
 
 const resultCodec = {
   mode: "strict",
-  typeSymbol: "dsh-go-quota#GoQuotaResult",
+  typeSymbol: "@skyrocks/dsh-go-quota#GoQuotaResult",
   create: () => ({ parse: parseResult }),
 };
 
 const invocation = (method) => ({
-  id: `dsh-go-quota#goQuota/${method}`,
+  id: `@skyrocks/dsh-go-quota#goQuota/${method}`,
   service: "goQuota",
   namespace: "goQuota",
   method,
@@ -55,7 +55,7 @@ const invocation = (method) => ({
 });
 
 export const TYPERT = {
-  package: "dsh-go-quota",
+  package: "@skyrocks/dsh-go-quota",
   face: "host",
   schemas: [],
   invocations: [invocation("read"), invocation("refresh")],

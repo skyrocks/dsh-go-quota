@@ -1,6 +1,6 @@
 {
-  "name": "dsh-go-quota",
-  "version": "0.1.8",
+  "name": "@skyrocks/dsh-go-quota",
+  "version": "0.1.9",
   "description": "DeepSeek Harness plugin: OpenCode GO 套餐用量（5 小时 / 周 / 月三窗口）常驻输入框下方",
   "license": "MIT",
   "type": "module",
