@@ -38,9 +38,10 @@ click-to-refresh.
 ### In the DSH desktop app (GUI, recommended)
 
 1. Open the DSH desktop app and go to the plugin manager (Settings → Plugins).
-2. Click “Add plugin” and paste:
+2. Click “Add plugin” and paste either source:
    ```
-   github:skyrocks/dsh-go-quota
+   dsh-go-quota                  # npm package (recommended)
+   github:skyrocks/dsh-go-quota  # GitHub default branch
    ```
 3. Confirm and wait for dependency resolution.
 4. **Fully quit and relaunch DSH** (Cmd+Q on macOS; quit from the tray on Windows).
@@ -54,8 +55,9 @@ Use the same “Add plugin” dialog with a different value:
 
 | Source | Paste | When |
 | --- | --- | --- |
-| GitHub | `github:skyrocks/dsh-go-quota` | Normal installs |
-| tarball | absolute path to `dsh-go-quota-0.1.6.tgz` | Pinned versions, sharing |
+| npm | `dsh-go-quota` | Normal installs, traceable versions |
+| GitHub | `github:skyrocks/dsh-go-quota` | Track the default branch |
+| tarball | absolute path to `dsh-go-quota-0.1.7.tgz` | Pinned versions, sharing |
 | local directory | absolute path to the checkout | Development (`link:` symlink) |
 
 On Windows, use `file:C:\path\to\dsh-go-quota` for directory installs to avoid
@@ -64,8 +66,9 @@ pnpm's `link:` drive-letter issue. Relative paths and `~` are rejected.
 ### CLI (optional)
 
 ```sh
+dsh plugin --profile desktop add dsh-go-quota
 dsh plugin --profile desktop add github:skyrocks/dsh-go-quota
-dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota-0.1.6.tgz
+dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota-0.1.7.tgz
 dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota
 ```
 

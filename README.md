@@ -7,6 +7,7 @@
 
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![dsh](https://img.shields.io/badge/DSH-0.2.1--rc.2%20line-4d6bfe)
+![npm](https://img.shields.io/npm/v/dsh-go-quota?label=npm)
 ![node](https://img.shields.io/badge/node-%3E%3D18-339933)
 ![dependencies](https://img.shields.io/badge/runtime%20deps-0-6bd586)
 
@@ -49,9 +50,10 @@
 ### 在 DSH 桌面端安装（图形界面，推荐）
 
 1. 打开 DSH 桌面端，进入插件管理页（设置 →「插件」）。
-2. 点「添加插件」，在弹窗里粘贴：
+2. 点「添加插件」，在弹窗里粘贴下面任意一种来源：
    ```
-   github:skyrocks/dsh-go-quota
+   dsh-go-quota                  # npm 包（推荐，版本固定、有下载量可查）
+   github:skyrocks/dsh-go-quota  # GitHub 默认分支
    ```
 3. 确认安装，等待依赖解析完成。
 4. **完全退出 DSH 再重新打开**（macOS 用 `Cmd+Q`；Windows 从托盘退出）。
@@ -67,8 +69,9 @@
 
 | 来源 | 粘贴内容 | 适用场景 |
 | --- | --- | --- |
-| GitHub | `github:skyrocks/dsh-go-quota` | 日常安装，跟随默认分支 |
-| tarball | tarball 的**绝对路径**，如 `/Users/you/Downloads/dsh-go-quota-0.1.6.tgz` | 固定版本、分发给别人 |
+| npm | `dsh-go-quota` | 日常安装，走 registry，版本可追溯 |
+| GitHub | `github:skyrocks/dsh-go-quota` | 想跟随默认分支的最新提交 |
+| tarball | tarball 的**绝对路径**，如 `/Users/you/Downloads/dsh-go-quota-0.1.7.tgz` | 固定版本、分发给别人 |
 | 本地目录 | 目录的**绝对路径**，如 `/Users/you/dsh-go-quota` | 开发调试（`link:` 符号链接） |
 
 Windows 的目录安装请写成 `file:C:\Users\you\dsh-go-quota`，避免 pnpm `link:` 的盘符问题。
@@ -79,11 +82,14 @@ Windows 的目录安装请写成 `file:C:\Users\you\dsh-go-quota`，避免 pnpm 
 如果你习惯终端，CLI 和弹窗等价：
 
 ```sh
+# npm（推荐）
+dsh plugin --profile desktop add dsh-go-quota
+
 # GitHub
 dsh plugin --profile desktop add github:skyrocks/dsh-go-quota
 
 # tarball
-dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota-0.1.6.tgz
+dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota-0.1.7.tgz
 
 # 本地目录（开发）
 dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota
@@ -97,7 +103,7 @@ dsh plugin --profile desktop add /absolute/path/to/dsh-go-quota
 插件本身跨平台：纯 ESM + 浏览器 bundle，没有 `process.platform` 分支、没有原生模块，
 `fetch` / `AbortSignal.timeout` 由 Node 自带。
 
-- 推荐用 **tarball**，弹窗粘贴 `C:\Users\you\Downloads\dsh-go-quota-0.1.6.tgz`。
+- 推荐用 **tarball**，弹窗粘贴 `C:\Users\you\Downloads\dsh-go-quota-0.1.7.tgz`。
 - 目录安装请用 `file:C:\...`；pnpm 的 `link:` 目录依赖在 Windows 上有盘符问题。
 - 路径必须是绝对路径。
 - 装完同样要完全退出并重启 DSH。

@@ -4,6 +4,18 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.1.7] - 2026-11-06
+
+### Added
+
+- Published to npm as `dsh-go-quota`; README and CLI examples now recommend the
+  registry install (`dsh plugin --profile desktop add dsh-go-quota`).
+- npm badge and `publishConfig.access: public`.
+
+### Changed
+
+- `author` set to `skyrocks`; tarball examples bumped to 0.1.7.
+
 ## [0.1.6] - 2026-10-27
 
 ### Added

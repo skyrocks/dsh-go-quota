@@ -1,6 +1,6 @@
 {
   "name": "dsh-go-quota",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "DeepSeek Harness plugin: OpenCode GO 套餐用量（5 小时 / 周 / 月三窗口）常驻输入框下方",
   "license": "MIT",
   "type": "module",
@@ -50,7 +50,7 @@
     "@deepseek-ai/dsh-typert-protocol": "0.2.1-rc.2",
     "@deepseek-ai/dsh-credentials": "0.2.1-rc.2"
   },
-  "author": "dsh-go-quota contributors",
+  "author": "skyrocks (https://github.com/skyrocks)",
   "keywords": [
     "deepseek-harness",
     "dsh",
@@ -63,6 +63,9 @@
   ],
   "scripts": {
     "test": "node test/smoke.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
