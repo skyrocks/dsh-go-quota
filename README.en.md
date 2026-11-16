@@ -1,5 +1,8 @@
 # dsh-go-quota
 
+[![CI](https://github.com/skyrocks/dsh-go-quota/actions/workflows/ci.yml/badge.svg)](https://github.com/skyrocks/dsh-go-quota/actions/workflows/ci.yml)
+![license](https://img.shields.io/badge/license-MIT-blue.svg)
+
 English | [简体中文](README.md)
 
 > Package: `@skyrocks/dsh-go-quota` (GitHub repository: `dsh-go-quota`)
