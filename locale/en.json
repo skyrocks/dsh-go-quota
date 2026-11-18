@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "OpenCode GO quota",
+    "description": "Shows the GO 5-hour, weekly and monthly quota windows under the composer, with progress bars and reset countdowns."
+  }
+}
